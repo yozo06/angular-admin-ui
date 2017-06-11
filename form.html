@@ -1,0 +1,139 @@
+<html>
+   <head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+   </head>
+<style> 
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+body {
+  background-color:#fff;
+  -webkit-font-smoothing: antialiased;
+  font: normal 14px Roboto,arial,sans-serif;
+}
+.container {
+
+	    padding: 15px;
+	    position: absolute;
+	}
+
+	.form-styles {
+	    background-color: #d6eaf8;
+	    padding-top: 40px;
+	    padding-bottom: 40px;
+	    padding-left: 30px;
+	    padding-right: 30px;
+	    border-radius: 15px;
+	}
+html { overflow-y: scroll; overflow-x:hidden; }
+body { position: absolute; }
+</style>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-md-offset-4 col-md-6">
+<form class="form-styles">
+  <div class="form-group">
+    <label for="releaseName">Release</label>
+    <input type="text" class="form-control" placeholder="Enter Release-Name">
+  </div>
+  <div class="form-group">
+    <label for="relTextarea">Release Description</label>
+    <textarea class="form-control" id="relTextarea" rows="2"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="releaseStart">Start Date</label>
+    <input type="text" class="form-control" name="startDate" placeholder="10/24/1984" />
+  </div>
+  <div class="form-group">
+    <label for="releaseEnd">End Date</label>
+    <input type="text" class="form-control" name="endDate" placeholder="11/28/1985" />
+  </div>
+  <hr>
+
+  <div class="form-group">
+    <label for="projectName">Project</label>
+    <input type="text" class="form-control" placeholder="Enter Project-Name">
+  </div>
+  <div class="form-group">
+    <label for="proTextarea">Project Description</label>
+    <textarea class="form-control" id="proTextarea" rows="2"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="proStart">Start Date</label>
+    <input type="text" class="form-control" name="startDate" placeholder="10/24/1984" />
+  </div>
+  <div class="form-group">
+    <label for="proEnd">End Date</label>
+    <input type="text" class="form-control" name="endDate" placeholder="11/28/1985" />
+  </div>
+  <div class="form-group">
+    <label for="proStatus">Project Status</label>
+    <input type="text" class="form-control" name="proStatus" placeholder="Current status of your project" />
+  </div>
+  <div class="form-group">
+    <label for="branchName">Branch</label>
+    <input type="text" class="form-control" placeholder="Enter Branch-Name">
+  </div>
+  <div class="form-group">
+    <label for="repoSelect1">Type of Repository</label>
+    <select class="form-control" id="repoSelect1">
+      <option>git</option>
+      <option>SVN</option>
+      <option>VSS</option>
+      <option>Other..</option>
+    </select>
+  </div>
+<hr>
+
+  <div class="form-group">
+    <label for="appName">Application Server</label>
+    <input type="text" class="form-control" placeholder="Enter Application-Server's Name">
+  </div>
+  <div class="form-group">
+    <label for="envTextarea">Application Description</label>
+    <textarea class="form-control" id="envTextarea" rows="2"></textarea>
+  </div>
+<hr>
+  <div class="form-group">
+    <label for="envName">Environment</label>
+    <input type="text" class="form-control" placeholder="Enter Environment-Name">
+  </div>
+  <div class="form-group">
+    <label for="envTextarea">Environment Description</label>
+    <textarea class="form-control" id="envTextarea" rows="2"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="envType">Environment Type</label>
+   <div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> 1
+  </label>
+</div>
+<div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> 2
+  </label>
+</div>
+<div class="form-check form-check-inline disabled">
+  <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> 3
+  </label>
+</div>
+    <small id="fileHelp" class="form-text text-muted">Please select the types of environments that support this particular release of your project. Multiple environments can be supported.</small>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+</div>
+
+</body>
+</html>
