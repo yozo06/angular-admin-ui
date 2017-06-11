@@ -8,26 +8,26 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    </head>
 <style>
-.container {
-	    background-color: #EDEDED;
-	    padding-top: 40px;
-	    padding-bottom: 40px;
-	    padding-left: 30px;
-	    padding-right: 30px;
-	    border-radius: 15px;
-	    margin-left:35%;
-	    margin-top:60%
-	    padding: 15px;
-	    position: fixed;
-	}
+#c1{
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+  background: grey;
+  border-radius:15px;
+  padding:25px 15px 15px 15px;
+  }
 </style>
    
    <body ng-app = "myApp">
-	<div class="container">
-<div class="row">
-<div class="col-md-offset-4 col-md-3">
-      <div ng-controller = "myCtrl">
-         <input type = "file" file-model = "myFile"/>
+	<div class="container text-center">
+<div class="row" id="c1" >
+      <div class="row" ng-controller = "myCtrl">
+         <div class="col-xs-1"></div><input class="col-xs-10" type = "file" ng-model = "myFile"/>
+         <br><br>
          <button class="btn btn-info" id="uplaodButton" ng-click = "uploadFile()">Upload me!</button>
 <hr>
 	<p><center><button class="btn btn-primary" id="confirmButton">Confirm your details..</button></center></p>
@@ -35,7 +35,6 @@
 </div>
       </div>
 
-      </div>
 
       <script>
          var myApp = angular.module('myApp', []);
@@ -86,7 +85,6 @@
             };
          }]);
 //FORM
-
     document.getElementById("uplaodButton").onclick = function () {
         location.href = "bootstrap.htm";
     };
